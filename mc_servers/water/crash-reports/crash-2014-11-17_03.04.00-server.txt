@@ -1,0 +1,200 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 11/17/14 3:04 AM
+Description: Watching Server
+
+java.lang.Error
+	at com.google.common.collect.AbstractIterator.next(AbstractIterator.java:153)
+	at bfh.a(SourceFile:774)
+	at aqu.a(SourceFile:2220)
+	at aqu.b(SourceFile:2208)
+	at aqu.a(SourceFile:973)
+	at wv.d(SourceFile:483)
+	at adw.s_(SourceFile:87)
+	at aqu.a(SourceFile:1406)
+	at qt.a(SourceFile:601)
+	at aqu.g(SourceFile:1384)
+	at aqu.i(SourceFile:1277)
+	at qt.i(SourceFile:479)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:607)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:447)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.AbstractIterator.next(AbstractIterator.java:153)
+	at bfh.a(SourceFile:774)
+	at aqu.a(SourceFile:2220)
+	at aqu.b(SourceFile:2208)
+	at aqu.a(SourceFile:973)
+	at wv.d(SourceFile:483)
+	at adw.s_(SourceFile:87)
+	at aqu.a(SourceFile:1406)
+	at qt.a(SourceFile:601)
+	at aqu.g(SourceFile:1384)
+	at aqu.i(SourceFile:1277)
+	at qt.i(SourceFile:479)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:607)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #3" Id=21 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@190f2e10
+	-  locked java.util.Collections$UnmodifiableSet@17c8d341
+	-  locked sun.nio.ch.EPollSelectorImpl@13f74560
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"File IO Thread" Id=26 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at brp.c(SourceFile:51)
+	at brp.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #2" Id=20 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@56f5d97a
+	-  locked java.util.Collections$UnmodifiableSet@36ea121a
+	-  locked sun.nio.ch.EPollSelectorImpl@67698d5d
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Server Watchdog" Id=24 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:446)
+	at pt.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+"Netty Server IO #1" Id=19 RUNNABLE (in native)
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4e9c1895
+	-  locked java.util.Collections$UnmodifiableSet@36da2635
+	-  locked sun.nio.ch.EPollSelectorImpl@50469836
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Netty Server IO #0" Id=18 RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7b6ee406
+	-  locked java.util.Collections$UnmodifiableSet@5598134e
+	-  locked sun.nio.ch.EPollSelectorImpl@32947c46
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	...
+
+
+"Server console handler" Id=15 RUNNABLE (in native)
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	-  locked java.io.BufferedInputStream@56f7c50a
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	-  locked java.io.InputStreamReader@5a355506
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=12 RUNNABLE
+	at com.google.common.collect.AbstractIterator.next(AbstractIterator.java:153)
+	at bfh.a(SourceFile:774)
+	at aqu.a(SourceFile:2220)
+	at aqu.b(SourceFile:2208)
+	at aqu.a(SourceFile:973)
+	at wv.d(SourceFile:483)
+	at adw.s_(SourceFile:87)
+	at aqu.a(SourceFile:1406)
+	...
+
+
+"Server Infinisleeper" Id=11 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at pp.run(SourceFile:64)
+
+
+"Snooper Timer" Id=10 TIMED_WAITING on java.util.TaskQueue@4fa22f6d
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@4fa22f6d
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@5ec51c93
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@5ec51c93
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:142)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:158)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@36f25dd4
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@36f25dd4
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:157)
+
+
+
+Stacktrace:
+	at pt.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Linux (amd64) version 3.17.2-1-ARCH
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 389054672 bytes (371 MB) / 608174080 bytes (580 MB) up to 2774007808 bytes (2645 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 40; [qw['JDongian'/63, l='world', x=-12.69, y=127.63, z=-10.97], qw['ElliotIves'/5797, l='world', x=-0.55, y=70.00, z=-60.92]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

@@ -1,10 +1,10 @@
 mc_servers/superflat/*.json
 
-mc_servers/superflat/world/data/villages.dat
-mc_servers/superflat/world/data/villages_end.dat
-mc_servers/superflat/world/data/villages_nether.dat
+mc_servers/*/world/data/villages.dat
+mc_servers/*/world/data/villages_end.dat
+mc_servers/*/world/data/villages_nether.dat
 
-mc_servers/superflat/logs/
-mc_servers/superflat/world/playerdata/
-mc_servers/superflat/world/region/
-mc_servers/superflat/world/stats/
+mc_servers/*/logs/
+mc_servers/*/world/playerdata/
+mc_servers/*/world/region/
+mc_servers/*/world/stats/

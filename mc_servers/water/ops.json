@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "61985c1d-5b6c-3f13-8af2-69915bae6c88",
+    "name": "an_sphere_guy",
+    "level": 4
+  },
+  {
+    "uuid": "e28b1a65-8022-3f14-b7c9-da63f5a4c1dc",
+    "name": "batman",
+    "level": 4
+  },
+  {
+    "uuid": "a50bbdb3-2f39-3290-bcb3-341df32fbc56",
+    "name": "reported",
+    "level": 4
+  },
+  {
+    "uuid": "ddc915a0-799b-3e2f-a4aa-479253e6e630",
+    "name": "ElliotIves",
+    "level": 4
+  },
+  {
+    "uuid": "c38176d1-1c7d-3dca-9bdd-dd21c20ac169",
+    "name": "minitrue",
+    "level": 4
+  },
+  {
+    "uuid": "3335e672-1a1b-3f43-ab49-741b09437dac",
+    "name": "JDongian",
+    "level": 4
+  }
+]
