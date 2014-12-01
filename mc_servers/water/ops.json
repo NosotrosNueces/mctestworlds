@@ -1,7 +1,12 @@
 [
   {
-    "uuid": "61985c1d-5b6c-3f13-8af2-69915bae6c88",
-    "name": "an_sphere_guy",
+    "uuid": "3335e672-1a1b-3f43-ab49-741b09437dac",
+    "name": "JDongian",
+    "level": 4
+  },
+  {
+    "uuid": "c38176d1-1c7d-3dca-9bdd-dd21c20ac169",
+    "name": "minitrue",
     "level": 4
   },
   {
@@ -20,13 +25,8 @@
     "level": 4
   },
   {
-    "uuid": "c38176d1-1c7d-3dca-9bdd-dd21c20ac169",
-    "name": "minitrue",
-    "level": 4
-  },
-  {
-    "uuid": "3335e672-1a1b-3f43-ab49-741b09437dac",
-    "name": "JDongian",
+    "uuid": "61985c1d-5b6c-3f13-8af2-69915bae6c88",
+    "name": "an_sphere_guy",
     "level": 4
   }
 ]
