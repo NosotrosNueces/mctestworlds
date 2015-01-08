@@ -1,0 +1,7 @@
+/fill -8 56 -8 8 60 8 minecraft:glass
+/fill -8 55 -8 8 55 8 minecraft:sandstone
+/fill -2 55 -2 2 55 2 minecraft:glass
+/fill -8 51 -8 8 51 8 minecraft:glass
+/fill -7 56 -7 7 60 7 minecraft:air
+/fill -8 52 -8 8 54 8 minecraft:air
+/fill -8 48 -8 8 50 8 minecraft:air
