@@ -77,23 +77,27 @@ def get_arena(params):
     return commands
 
 
-def send_command(command, session, pane=0):
-    call(["tmux", "send-keys", "-t" "{session}:{pane}".format(session=session, pane=pane),
+def send_command(command, session, pane=0, manager="tmux"):
+    if manager == "tmux":
+        call(["tmux", "send-keys", "-t" "{session}:{pane}".format(session=session, pane=pane),
           command, "C-m"])
     # screen -p 0 -S $session_name -X eval "stuff \015\"$*\"\015"
 
 
 def send_commands(commands, session, pane=0):
-    """Send a list of commands to the server."""
+    """Send a list of commands to the specified tmux session."""
     for _ in commands:
-        send_command(_, session, pane)
-        sleep(0.1)
+        if _ and _[0] != '#':
+            send_command(_, session, pane)
+            sleep(0.05)
 
 
 def send_file(filename, session, pane=0):
-    """Send a file of server commands to the tmux session."""
+    """Send a file of server commands to the specified tmux session."""
     send_commands(open(filename, 'r').read().split('\n'), session, pane)
 
 
 if __name__ == "__main__":
-    get_arena(get_square_params())
+    SESSION = input("tmux session: ")
+    send_file("examples/arena.txt", SESSION)
+    send_file("examples/mining.txt", SESSION)

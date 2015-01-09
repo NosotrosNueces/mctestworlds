@@ -1,7 +1,61 @@
+# Arena
 /fill -8 56 -8 8 60 8 minecraft:glass
+/fill -7 56 -7 7 60 7 minecraft:air
+# Arena Floor
 /fill -8 55 -8 8 55 8 minecraft:sandstone
 /fill -2 55 -2 2 55 2 minecraft:glass
-/fill -8 51 -8 8 51 8 minecraft:glass
-/fill -7 56 -7 7 60 7 minecraft:air
+
+# Rooms
 /fill -8 52 -8 8 54 8 minecraft:air
 /fill -8 48 -8 8 50 8 minecraft:air
+# Room Floors
+/fill -8 51 -8 8 51 8 minecraft:sandstone
+/fill -2 51 -2 2 51 2 minecraft:glass
+/fill -8 47 -8 8 47 8 minecraft:sandstone
+/fill -2 47 -2 2 47 2 minecraft:glass
+
+# Creeper summoning blocks
+/setblock -8 52 8 minecraft:command_block 0 replace {Command: "/summon Creeper 4 58 4"}
+/setblock -8 52 7 minecraft:command_block 0 replace {Command: "/summon Creeper -4 58 4"}
+/setblock -8 52 6 minecraft:command_block 0 replace {Command: "/summon Creeper 4 58 -4"}
+/setblock -8 52 5 minecraft:command_block 0 replace {Command: "/summon Creeper -4 58 -4"}
+/setblock -7 52 8 minecraft:unpowered_repeater 3
+/setblock -7 52 7 minecraft:unpowered_repeater 3
+/setblock -7 52 6 minecraft:unpowered_repeater 3
+/setblock -7 52 5 minecraft:unpowered_repeater 3
+/fill -6 52 8 -6 52 5 minecraft:redstone_wire
+/setblock -5 52 6 minecraft:unpowered_repeater 3
+/setblock -4 52 6 minecraft:unpowered_repeater 3
+/setblock -3 52 6 minecraft:unpowered_repeater 3
+/setblock -2 52 6 minecraft:unpowered_repeater 3
+/setblock -5 52 5 minecraft:unpowered_repeater 1
+/setblock -4 52 5 minecraft:unpowered_repeater 1
+/setblock -3 52 5 minecraft:unpowered_repeater 1
+/setblock -2 52 5 minecraft:unpowered_repeater 1
+/setblock -1 52 5 minecraft:sandstone
+/setblock -1 52 6 minecraft:redstone_torch 3
+
+# Long timer to clear creepers
+/setblock -8 52 -8 minecraft:command_block 0 replace {Command: "/summon Item -5 54.7 -8 {Item:{id:1,Count:1},Age:2000}"}
+/setblock -8 52 -7 minecraft:command_block 0 replace {Command: "/kill @e[type=Item]"}
+/setblock -8 52 -6 minecraft:command_block 0 replace {Command: "/kill @e[type=Creeper]"}
+/setblock -7 52 -8 minecraft:unpowered_repeater 15
+/setblock -7 52 -7 minecraft:unpowered_repeater 7
+/setblock -7 52 -6 minecraft:unpowered_repeater 3
+/fill -4 53 -8 -6 54 -7 minecraft:glass
+/fill -5 53 -8 -5 54 -8 minecraft:air
+/setblock -5 52 -8 minecraft:sandstone
+/setblock -5 53 -8 minecraft:heavy_weighted_pressure_plate
+/fill -6 52 -7 -6 52 -6 minecraft:redstone_wire
+/setblock -5 52 -6 minecraft:redstone_wire
+/setblock -5 52 -7 minecraft:unpowered_repeater 12
+/setblock -6 52 -8 minecraft:redstone_torch 2
+
+# Maxspeed clock
+/setblock 7 52 -7 minecraft:command_block 0 replace {Command: "/setblock ~ ~1 ~ minecraft:redstone_block 0 destroy"}
+/setblock 7 54 -7 minecraft:command_block 0 replace {Command: "/kill @e[type=Item,r=2]"}
+/setblock 7 53 -8 minecraft:command_block 0 replace {Command: "/kill @e[type=Item,x=-7,dx=15,z=-7,dz=15,y=56,dy=1]"}
+/setblock 8 53 -7 minecraft:command_block 0 replace {Command: "/kill @e[type=XPOrb]"}
+
+# Start redstone clock
+/setblock 7 53 -7 minecraft:redstone_block
