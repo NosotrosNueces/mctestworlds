@@ -1,10 +1,7 @@
-mc_servers/superflat/*.json
+mc_servers/*/*.json
+mc_servers/*/world/
+mc_servers/*/logs
+mc_servers/*/crash-reports
+mc_servers/*/server.properties
 
-mc_servers/*/world/data/villages.dat
-mc_servers/*/world/data/villages_end.dat
-mc_servers/*/world/data/villages_nether.dat
-
-mc_servers/*/logs/
-mc_servers/*/world/playerdata/
-mc_servers/*/world/region/
-mc_servers/*/world/stats/
+__pycache__

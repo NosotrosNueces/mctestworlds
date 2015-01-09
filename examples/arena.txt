@@ -36,7 +36,7 @@
 /setblock -1 52 6 minecraft:redstone_torch 3
 
 # Long timer to clear creepers
-/setblock -8 52 -8 minecraft:command_block 0 replace {Command: "/summon Item -5 54.7 -8 {Item:{id:1,Count:1},Age:2000}"}
+/setblock -8 52 -8 minecraft:command_block 0 replace {Command: "/summon Item -5 54.7 -8 {Item:{id:1,Count:1},Age:3000}"}
 /setblock -8 52 -7 minecraft:command_block 0 replace {Command: "/kill @e[type=Item]"}
 /setblock -8 52 -6 minecraft:command_block 0 replace {Command: "/kill @e[type=Creeper]"}
 /setblock -7 52 -8 minecraft:unpowered_repeater 15
