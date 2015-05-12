@@ -1,3 +1,5 @@
+#!/bin/python3
+
 """Maek arena."""
 from subprocess import call
 from time import sleep
